@@ -26,3 +26,32 @@ test('It is not character type)', () => {
     console.log(character);
   }).toThrow('Некорректный тип игрока');
 });
+
+test('Function levelUp - check error', () => {
+  const character = new Character('Igor', 'Bowman');
+  character.health = 0;
+  expect(() => {
+    character.levelUp();
+  }).toThrow('Невозможно повысить уровень');
+});
+
+test('Function levelUp works', () => {
+  const character = new Character('Igor', 'Bowman');
+  character.levelUp();
+  expect(character.level).toBe(2);
+  expect(character.health).toBe(100);
+});
+
+// test('Function levelUp works', () => {
+//   const character = new Character('Igor', 'Bowman');
+//   character.levelUp();
+//   expect(character.level).toBe(2);
+//   expect(character.health).toBe(100);
+// });
+
+// test('check function damage', () => {
+//   const character = new Character('Igor', 'Bowman');
+//   character.defence = 30;
+//   character.damage(12);
+//   expect(character.health).toBeCloseTo(91.6);
+// });

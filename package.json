@@ -1,7 +1,7 @@
 {
   "name": "classes",
   "version": "1.0.0",
-  "description": "",
+  "description": "game",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
