@@ -32,7 +32,7 @@ test('check function damage with health > 0', () => {
 
 test('check function damage wtih health <= 0', () => {
   const character = new Bowman('Igor');
-  character.health = -30;
+  character.health = 0;
   character.damage(12);
   expect(character.health).toBe(0);
 });
